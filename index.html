@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="home.css?v=6">
 </head>
 <body>
 
@@ -27,10 +27,11 @@
 
   <!-- ========== PAGE 1: HERO ========== -->
   <div id="page-1">
-    <div class="corner-index tl trigger-nav">Z</div>
-    <div class="corner-index tr trigger-nav">W</div>
-    <div class="corner-index bl trigger-nav">X</div>
-    <div class="corner-index br trigger-nav">U</div>
+    <button class="menu-btn trigger-nav" aria-label="Open menu">
+      <span class="menu-btn-line"></span>
+      <span class="menu-btn-line"></span>
+      <span class="menu-btn-line"></span>
+    </button>
 
     <div id="canvas-zone">
       <canvas id="ascii-canvas"></canvas>
@@ -41,38 +42,31 @@
     </div>
 
     <div id="panel-zone">
-      <div class="panel-col">
-        <div>
-          <div class="meta-line">
-            <span>Zhang Wenxu</span>
-            <span id="timestamp">--:--:--</span>
-          </div>
-          <p class="bio-text">
-            Product designer committed to user-centered thinking. I craft digital experiences by listening first, ensuring every pixel serves a human need.
-          </p>
-        </div>
-        <div class="panel-note">Currently designing for connection and accessibility.</div>
+      <!-- Row 1: labels -->
+      <div class="meta-line">
+        <span>Zhang Wenxu</span>
+        <span id="timestamp">--:--:--</span>
       </div>
+      <div></div>
+      <div class="copyright">© 2025 Zhang Wenxu</div>
 
-      <div class="panel-col">
-        <ul class="link-list">
-          <li><a href="mailto:hi@example.com">Collaborate</a></li>
-          <li><a href="#" id="link-portfolio">Portfolio</a></li>
-          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="#">Reading List</a></li>
-        </ul>
-        <div class="colophon">
-          Designed with care in Shanghai.<br>
-          Typeface: DM Sans (Humanist).
-        </div>
-      </div>
+      <!-- Row 2: main content (bio & links — same row, same height) -->
+      <p class="bio-text">
+        Product designer committed to user-centered thinking. I craft digital experiences by listening first, ensuring every pixel serves a human need.
+      </p>
+      <ul class="link-list">
+        <li><a href="#" id="link-portfolio">Project</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="mailto:hi@example.com">Contact</a></li>
+      </ul>
+      <div></div>
 
-      <div class="panel-col panel-col-right">
-        <div class="copyright">© 2025 Zhang Wenxu</div>
-        <div class="telemetry">
-          LATENCY: <span id="render-ms">0.0</span>ms<br>
-          X: <span id="mouse-x">0</span> Y: <span id="mouse-y">0</span>
-        </div>
+      <!-- Row 3: footer labels -->
+      <div class="panel-note">Designing at the edge of human intuition and AI possibility.</div>
+      <div class="colophon">Based in Hong Kong, with love.</div>
+      <div class="telemetry">
+        LATENCY: <span id="render-ms">0.0</span>ms<br>
+        X: <span id="mouse-x">0</span> Y: <span id="mouse-y">0</span>
       </div>
     </div>
 
