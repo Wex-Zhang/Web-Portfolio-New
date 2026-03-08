@@ -1,0 +1,404 @@
+/* ===== jyang.io style: Black background, minimal layout ===== */
+:root {
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-text-muted: #a0a0a0;
+  --color-text-dim: #6b6b6b;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition: 0.2s ease;
+  --max-width: 900px;
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* ===== Navigation ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: var(--color-bg);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.nav-resume {
+  color: var(--color-text-muted) !important;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+}
+
+/* ===== Hero / Intro ===== */
+.hero {
+  padding: 8rem 2rem 6rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero-container {
+  max-width: 580px;
+}
+
+.hero-intro-line {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.hero-name-highlight {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.hero-intro-line a,
+.hero-desc a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.hero-desc em a {
+  font-style: italic;
+}
+
+.hero-action {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.hero-action a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-reels {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.hero-reels a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-past {
+  font-size: 0.9rem;
+  color: var(--color-text-dim);
+}
+
+/* ===== Work - 2x2 Grid with visual cards ===== */
+.work {
+  padding: 0;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  min-height: 60vh;
+}
+
+.work-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  min-height: 45vh;
+}
+
+.work-card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.work-card:hover .work-card-bg {
+  transform: scale(1.03);
+}
+
+/* Project backgrounds - 酷渲云 AI/电商 · 飞利浦 智慧家居 */
+.work-card-bg-1 {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 40%, #0ea5e9 100%);
+}
+
+.work-card-bg-2 {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #64748b 100%);
+}
+
+.work-card-bg-3 {
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 50%, #0d0d0d 100%);
+}
+
+.work-card-bg-4 {
+  background: linear-gradient(135deg, #e85d04 0%, #dc2f02 100%);
+}
+
+.work-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85));
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.work-card-overlay::after {
+  content: 'View case study →';
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+  margin-top: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.work-card:hover .work-card-overlay::after {
+  opacity: 1;
+}
+
+.work-card-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.work-card-product {
+  font-size: 0.9rem;
+}
+
+.work-card-company {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.work-card-tag {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+}
+
+/* ===== Info Section ===== */
+.info {
+  padding: 4rem 2rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.info-content {
+  max-width: 400px;
+}
+
+.info-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.info-version {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.info-role {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.info-rights {
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+}
+
+/* ===== Footer ===== */
+.footer {
+  padding: 4rem 2rem 3rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-chat {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-email {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: var(--color-text-muted);
+}
+
+.footer-links a:hover {
+  color: var(--color-text);
+  opacity: 1;
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Mobile menu ===== */
+.nav-links.nav-open {
+  display: flex;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  padding: 2rem;
+  background: var(--color-bg);
+  gap: 1rem;
+}
+
+.nav-toggle-active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle-active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-toggle span {
+  transition: var(--transition);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .work-card {
+    min-height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .hero {
+    padding: 6rem 1.5rem 4rem;
+  }
+
+  .work-card {
+    min-height: 40vh;
+  }
+
+  .work-card-overlay {
+    padding: 1.25rem 1.5rem;
+  }
+}

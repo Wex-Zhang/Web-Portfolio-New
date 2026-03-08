@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhang Wenxu — Product Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-outline"></div>
+
+  <!-- Nav Overlay -->
+  <div id="nav-overlay">
+    <div class="nav-content">
+      <div class="nav-item" data-target="work">Work</div>
+      <div class="nav-item" data-target="about">About</div>
+      <div class="nav-item" data-target="contact">Contact</div>
+      <div class="nav-item trigger-nav-close">[ Close ]</div>
+    </div>
+  </div>
+
+  <!-- ========== PAGE 1: HERO ========== -->
+  <div id="page-1">
+    <div class="corner-index tl trigger-nav">Z</div>
+    <div class="corner-index tr trigger-nav">W</div>
+    <div class="corner-index bl trigger-nav">X</div>
+    <div class="corner-index br trigger-nav">U</div>
+
+    <div id="canvas-zone">
+      <canvas id="ascii-canvas"></canvas>
+      <div class="hero-text">
+        <div class="hero-headline">Empathy-Driven<br>Human Systems</div>
+        <div class="hero-subline">Building tools that honor the user's journey.</div>
+      </div>
+    </div>
+
+    <div id="panel-zone">
+      <div class="panel-col">
+        <div>
+          <div class="meta-line">
+            <span>Zhang Wenxu</span>
+            <span id="timestamp">--:--:--</span>
+          </div>
+          <p class="bio-text">
+            Product designer committed to user-centered thinking. I craft digital experiences by listening first, ensuring every pixel serves a human need.
+          </p>
+        </div>
+        <div class="panel-note">Currently designing for connection and accessibility.</div>
+      </div>
+
+      <div class="panel-col">
+        <ul class="link-list">
+          <li><a href="mailto:hi@example.com">Collaborate</a></li>
+          <li><a href="#" id="link-portfolio">Portfolio</a></li>
+          <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#">Reading List</a></li>
+        </ul>
+        <div class="colophon">
+          Designed with care in Shanghai.<br>
+          Typeface: DM Sans (Humanist).
+        </div>
+      </div>
+
+      <div class="panel-col panel-col-right">
+        <div class="copyright">© 2025 Zhang Wenxu</div>
+        <div class="telemetry">
+          LATENCY: <span id="render-ms">0.0</span>ms<br>
+          X: <span id="mouse-x">0</span> Y: <span id="mouse-y">0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Hint -->
+    <div class="scroll-hint">
+      <span class="scroll-hint-label">Scroll</span>
+      <div class="scroll-hint-line"></div>
+    </div>
+  </div>
+
+  <!-- ========== PAGE 2: PROJECTS ========== -->
+  <div id="page-2">
+    <nav class="proj-nav">
+      <a href="#" class="proj-nav-logo" id="proj-logo-back">Zhang Wenxu</a>
+      <div class="proj-nav-right">
+        <a href="#">Projects</a>
+        <a href="#">About</a>
+        <a href="mailto:hi@example.com" class="proj-nav-cta">Get in touch</a>
+      </div>
+    </nav>
+
+    <div class="projects-grid">
+      <a href="project-kuxuan.html" class="proj-card">
+        <div class="proj-card-img proj-img-1">
+          <div class="proj-mockup proj-mockup-phone"></div>
+        </div>
+        <div class="proj-card-info">
+          <span class="proj-cat">E-Commerce / Feature Design</span>
+          <div class="proj-name-row">
+            <span class="proj-name">酷渲云 AI 产品图</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="project-philips.html" class="proj-card">
+        <div class="proj-card-img proj-img-2">
+          <div class="proj-mockup proj-mockup-tablet"></div>
+        </div>
+        <div class="proj-card-info">
+          <span class="proj-cat">Smart Home / UX Redesign</span>
+          <div class="proj-name-row">
+            <span class="proj-name">Philips 智慧家 2.0</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="proj-card proj-card-featured">
+        <div class="proj-card-img proj-img-3">
+          <div class="proj-mockup proj-mockup-laptop"></div>
+        </div>
+        <div class="proj-card-info">
+          <span class="proj-cat">Marketing / Interactive</span>
+          <div class="proj-name-row">
+            <span class="proj-arrow">→</span>
+            <span class="proj-name">Apple iPhone 3D</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="proj-card">
+        <div class="proj-card-img proj-img-4">
+          <div class="proj-mockup proj-mockup-phone"></div>
+        </div>
+        <div class="proj-card-info">
+          <span class="proj-cat">Social / Avatar Platform</span>
+          <div class="proj-name-row">
+            <span class="proj-name">Hyper.online</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="proj-card">
+        <div class="proj-card-img proj-img-5">
+          <div class="proj-mockup proj-mockup-phone"></div>
+        </div>
+        <div class="proj-card-info">
+          <span class="proj-cat">Mobility / App Design</span>
+          <div class="proj-name-row">
+            <span class="proj-name">Urban Rider</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="#" class="proj-card">
+        <div class="proj-card-img proj-img-6">
+          <div class="proj-mockup proj-mockup-tablet"></div>
+        </div>
+        <div class="proj-card-info">
+          <span class="proj-cat">Wellness / UI Design</span>
+          <div class="proj-name-row">
+            <span class="proj-name">Calm+</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Footer on projects page -->
+    <footer class="proj-footer">
+      <div class="proj-footer-inner">
+        <span>© 2025 Zhang Wenxu</span>
+        <div class="proj-footer-links">
+          <a href="#">Resume</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:hi@example.com">Email</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>
